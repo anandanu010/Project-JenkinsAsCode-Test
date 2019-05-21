@@ -1,6 +1,6 @@
 pipeline {
 
-agent Test1
+agent any
 	stages {
 		stage ('Initialize') {
 			steps {
