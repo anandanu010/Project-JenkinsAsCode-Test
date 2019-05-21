@@ -1,6 +1,6 @@
 pipeline {
 
-agent Test1
+agent any
 	stages {
 		stage ('Initialize') {
 			steps {
@@ -10,11 +10,17 @@ agent Test1
 				  '''
 	   		  }
 									 }
-		stage ('BUILD') {
+		stage ('Build') {
 			steps {
-				  echo 'HELLO WORLD'
+				  echo 'Hello World'
 				  }
 					}
+		stage ('Deploy') {
+                        steps {
+                                  echo 'Deploying an artifact'
+                                  }
+                                        }
+
 					}
 
 }
